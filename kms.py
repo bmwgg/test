@@ -53,10 +53,10 @@ class BinaryServerHandler(BaseHandler):
 
                     # ****************************
                     print(data, data.hex())
-                    # self.writer.write(data)
+                    self.writer.write(data)
                     # ****************************
 
-                    # await self.writer.drain()
+                    await self.writer.drain()
                     continue
         except ConnectionResetError as e:
             pass
